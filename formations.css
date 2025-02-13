@@ -1,0 +1,178 @@
+/* ======= Réinitialisation globale ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ======= Styles du corps ======= */
+body {
+    background: #2C2C2C; /* Fond anthracite */
+    color: #FFFFFF; /* Texte clair */
+    line-height: 1.6;
+}
+
+/* ======= En-tête et navigation ======= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: #2C2C2C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #D4AF37; /* Couleur dorée */
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #D4AF37; /* Couleur dorée */
+}
+
+/* ======= Titres généraux ======= */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 160px;
+    font-size: 36px;
+    text-align: center;
+    color: #D4AF37; /* Couleur dorée */
+}
+
+h3 {
+    font-size: 24px;
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Liens ======= */
+a {
+    text-decoration: none;
+    color: #D4AF37; /* Couleur dorée */
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Boutons ======= */
+.btn {
+    display: inline-block;
+    background: #6A4E4D; /* Bordeaux */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #D4AF37; /* Doré */
+    color: #2C2C2C; /* Anthracite */
+    box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+}
+
+/* ======= Sections ======= */
+section {
+    padding: 50px 10%;
+}
+
+/* ======= Pied de page ======= */
+footer {
+    text-align: center;
+    background: #2C2C2C; /* Anthracite */
+    color: #FFFFFF;
+    padding: 180px;
+    font-size: 14px;
+}
+
+
+.diplomes {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    background-color: #2C2C2C;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.diplomes h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #faf4f4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #f5cd2c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.diplome-item {
+    background: #2C2C2C;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.diplome-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.diplome-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fdec01;
+    font-weight: bold;
+}
+
+.diplome-item p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #f8f2f2;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .diplomes {
+        padding: 20px 10px;
+    }
+
+    .diplome-item {
+        padding: 15px;
+    }
+
+    .diplome-item h3 {
+        font-size: 18px;
+    }
+
+    .diplome-item p {
+        font-size: 14px;
+    }
+}

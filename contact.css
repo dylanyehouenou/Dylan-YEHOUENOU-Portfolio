@@ -1,0 +1,228 @@
+/* ======= Réinitialisation globale ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ======= Styles du corps ======= */
+body {
+    background: #2C2C2C; /* Fond anthracite */
+    color: #FFFFFF; /* Texte clair */
+    line-height: 1.6;
+}
+
+/* ======= En-tête et navigation ======= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: #2C2C2C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #D4AF37; /* Couleur dorée */
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #D4AF37; /* Couleur dorée */
+}
+
+/* ======= Titres généraux ======= */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 160px;
+    font-size: 36px;
+    text-align: center;
+    color: #D4AF37; /* Couleur dorée */
+}
+
+h3 {
+    font-size: 24px;
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Liens ======= */
+a {
+    text-decoration: none;
+    color: #D4AF37; /* Couleur dorée */
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Boutons ======= */
+.btn {
+    display: inline-block;
+    background: #6A4E4D; /* Bordeaux */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #D4AF37; /* Doré */
+    color: #2C2C2C; /* Anthracite */
+    box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+}
+
+/* ======= Sections ======= */
+section {
+    padding: 50px 10%;
+}
+
+/* ======= Pied de page ======= */
+footer {
+    text-align: center;
+    background: #2C2C2C; /* Anthracite */
+    color: #FFFFFF;
+    padding: 180px;
+    font-size: 14px;
+}
+
+.contact {
+    font-family: Arial, sans-serif;
+    padding: 40px 20px;
+    background-color: #2C2C2C;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fdf5f5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.contact h2 span {
+    color: #f2f7f2;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: #4caf50;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #388e3c;
+}
+
+.contact-icons i {
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #4caf50;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form .btn-box {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form .btn-box:hover {
+    background-color: #388e3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-content {
+        gap: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .contact-icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

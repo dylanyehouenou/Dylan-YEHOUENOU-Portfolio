@@ -1,0 +1,159 @@
+/* ======= Réinitialisation globale ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ======= Styles du corps ======= */
+body {
+    background: #2C2C2C; /* Fond anthracite */
+    color: #FFFFFF; /* Texte clair */
+    line-height: 1.6;
+}
+
+/* ======= En-tête et navigation ======= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: #2C2C2C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #D4AF37; /* Couleur dorée */
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #D4AF37; /* Couleur dorée */
+}
+
+/* ======= Titres généraux ======= */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 160px;
+    font-size: 36px;
+    text-align: center;
+    color: #D4AF37; /* Couleur dorée */
+}
+
+h3 {
+    font-size: 24px;
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Liens ======= */
+a {
+    text-decoration: none;
+    color: #D4AF37; /* Couleur dorée */
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF; /* Couleur blanche */
+}
+
+/* ======= Boutons ======= */
+.btn {
+    display: inline-block;
+    background: #6A4E4D; /* Bordeaux */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #D4AF37; /* Doré */
+    color: #2C2C2C; /* Anthracite */
+    box-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+}
+
+/* ======= Sections ======= */
+section {
+    padding: 50px 10%;
+}
+
+/* ======= Pied de page ======= */
+footer {
+    text-align: center;
+    background: #2C2C2C; /* Anthracite */
+    color: #FFFFFF;
+    padding: 180px;
+    font-size: 14px;
+}
+/* ======= about.html ======= */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 10%;
+    background: linear-gradient(135deg, #2C2C2C, #2C2C2C); /* Dégradé anthracite et bordeaux */
+    color: #FFFFFF;
+    padding: 50px 10%;
+}
+
+.about-img {
+    margin-top: 160px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-text {
+    flex: 2;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-text h2 span {
+    color: #D4AF37; /* Doré */
+}
+.about-text h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
