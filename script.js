@@ -1,5 +1,5 @@
 var typed = new Typed(".text", {
-    strings: [" Dévellopeur Web en freelance", "Dévellopeur Swift UI en freelance ", "Futur specialiste en Cybersecurité ","BTS CIEL en Alternance"],
+    strings: [" Dévellopeur Web en freelance", "Dévellopeur Swift UI en freelance ", "Futur specialiste en Cybersecurité ","BTS CIEL en Alternance", "Devellopeur full stack en Alternance"],
     typeSpeed: 20,
     backSpeed: 60,
     backDelay: 1000,
