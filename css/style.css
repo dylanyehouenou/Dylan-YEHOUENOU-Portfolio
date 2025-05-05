@@ -1,3 +1,11 @@
+html, body {
+  overflow-x: hidden;     /* Empêche le scroll horizontal */
+  scroll-behavior: smooth; /* Scroll doux pour les ancres */
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
@@ -44,10 +52,43 @@ body {
   text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif; /* Police futuriste */
+  text-transform: uppercase;          /* Tout en majuscules */
+  letter-spacing: 2px;               /* Espacement des lettres */
+}
+
+/* Effet dégradé sur le h1 */
+h1 {
+  background: linear-gradient(90deg, var(--neon), var(--secondary));
+  -webkit-background-clip: text; /* Applique le dégradé au texte */
+  background-clip: text;
+  color: transparent;            /* Rend le texte transparent pour voir le dégradé */
+  text-shadow: 0 0 10px rgba(108, 74, 182, 0.3);
+}
+
+.header_section {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: rgba(26, 26, 46, 0.9); /* Fond semi-transparent */
+  backdrop-filter: blur(10px);       /* Effet de flou */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 5px 30px rgba(0, 245, 255, 0.1);
+}
+
+/* Animation du header au scroll */
+.header_section.scrolled {
+  padding: 10px 0;
+  background: rgba(26, 26, 46, 0.98);
+}
+
 .heading_container h2 {
   position: relative;
   font-weight: bold;
   margin-right: 10px;
+
 }
 
 .heading_container img {
@@ -56,7 +97,7 @@ body {
 
 /*header section*/
 .hero_area {
-  height: 98vh;
+  height: 100vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,7 +106,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #eae6f5;
+          background: radial-gradient(circle at 70% 30%, var(--dark) 0%, #16213E 100%);
+          overflow: hidden;
+}
+
+.hero_area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(0,245,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
+  opacity: 0.1;
 }
 
 .sub_page .hero_area {
@@ -83,17 +136,32 @@ body {
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 7px 20px;
   margin: 10px 15px;
-  color: #000000;
+  color: var(--light);
   text-align: center;
   border-radius: 35px;
   text-transform: uppercase;
   font-size: 15px;
+  transition: all 0.3s;
 }
+
+.custom_nav-container .navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--neon);
+  transition: width 0.3s;
+}
+
 
 .custom_nav-container .navbar-nav .nav-item.active .nav-link, .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
   background-color: #4b208c;
   color: #ffffff;
 }
+
 
 a,
 a:hover,
@@ -111,6 +179,37 @@ a:focus {
   outline: none !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+/* ========== BOUTONS ========== */
+.btn {
+  display: inline-block;
+  padding: 12px 35px;
+  background: transparent;
+  color: var(--neon);
+  border: 2px solid var(--neon);
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Effet de survol avec animation */
+.btn:hover {
+  background: var(--neon);
+  color: var(--dark);
+  transform: translateY(-3px);
+}
+
+/* Animation de la bordure */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon), var(--secondary));
+  transition: 0.5s;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -141,8 +240,14 @@ a:focus {
 .navbar-brand span {
   font-size: 22px;
   font-weight: 700;
-  color: #4b208c;
+  color: var(--neon);
+  background: linear-gradient(90deg, var(--neon), var(--secondary));
+  -webkit-background-clip: text; /* Applique le dégradé au texte */
+  background-clip: text;
+  color: transparent;            /* Rend le texte transparent pour voir le dégradé */
+  text-shadow: 0 0 10px var(--neon);
 }
+
 
 .custom_nav-container {
   z-index: 99999;
@@ -384,6 +489,63 @@ a:focus {
   background-color: #5625a1;
 }
 
+/* Section Compétences */
+.competences-section {
+  background: linear-gradient(to bottom, var(--light) 0%, #f1f1f1 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.competences-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><circle cx="20" cy="20" r="3" fill="rgba(108,74,182,0.1)"/><circle cx="80" cy="80" r="5" fill="rgba(108,74,182,0.1)"/><circle cx="50" cy="50" r="4" fill="rgba(108,74,182,0.1)"/></svg>');
+}
+
+.competence-item {
+  background: rgba(26, 26, 46, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(108, 74, 182, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.4s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.competence-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 245, 255, 0.2);
+  border-color: var(--neon);
+}
+
+.jauge {
+  background: rgba(255, 255, 255, 0.1);
+  height: 8px;
+  border-radius: 10px;
+}
+.progress {
+  background: linear-gradient(90deg, var(--secondary), var(--neon));
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  background: var(--neon);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon);
+}
+
+
 .about_section {
   background-color: #f3f0f6;
 }
@@ -429,6 +591,8 @@ a:focus {
 }
 
 .about_section .detail-box p {
+  font-size: 1.2rem;
+  max-width: 600px;
   margin-top: 25px;
 }
 
@@ -690,5 +854,20 @@ a:focus {
 
 .footer_section p a {
   color: #222222;
+}
+
+/* Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Effets spéciaux */
+.glow {
+  text-shadow: 0 0 10px var(--neon), 0 0 20px var(--neon);
 }
 /*# sourceMappingURL=style.css.map */

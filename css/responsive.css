@@ -2,6 +2,10 @@
 
 @media (max-width: 992px) {
 
+  h1 {
+    font-size: 2.8rem;
+  }
+
   .hero_area {
     height: auto;
   }
@@ -42,6 +46,10 @@
 
 @media (max-width: 768px) {
 
+  /* Adaptation pour mobiles */
+  .detail_box, .about_section .detail-box {
+    text-align: center;
+  }
 
   .slider_section .detail_box {
     text-align: center;
@@ -114,5 +122,21 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1170px;
+  }
+  /* Ajuste la taille des titres */
+  .detail_box h1 {
+    font-size: 3rem;
+  }
+  
+  /* Réorganise les services sur 2 colonnes */
+  .service_container .box {
+    flex-basis: 48%;
+  }
+}
+}
+@media (max-width: 1400px) {
+  /* Réduit l'opacité de l'effet d'arrière-plan */
+  .hero_area::before {
+    opacity: 0.05;
   }
 }
