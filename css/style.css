@@ -491,7 +491,8 @@ a:focus {
 
 /* Section Compétences */
 .competences-section {
-  background: linear-gradient(to bottom, var(--light) 0%, #f1f1f1 100%);
+  background-color: var(--dark);
+  background: linear-gradient(to bottom, var(--gray) 0%, #00000079 100%);
   position: relative;
   overflow: hidden;
 }
@@ -524,7 +525,6 @@ a:focus {
 
 .jauge {
   background: rgba(255, 255, 255, 0.1);
-  height: 8px;
   border-radius: 10px;
 }
 .progress {
