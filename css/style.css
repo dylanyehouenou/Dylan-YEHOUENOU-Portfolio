@@ -402,6 +402,7 @@ a:focus {
 
 .service_section {
   text-align: center;
+  background: #ffffff;
 }
 
 .service_section .heading_container {
@@ -491,8 +492,7 @@ a:focus {
 
 /* Section Compétences */
 .competences-section {
-  background-color: var(--dark);
-  background: linear-gradient(to bottom, var(--gray) 0%, #00000079 100%);
+  background-color: var(--light);
   position: relative;
   overflow: hidden;
 }
@@ -525,6 +525,7 @@ a:focus {
 
 .jauge {
   background: rgba(255, 255, 255, 0.1);
+
   border-radius: 10px;
 }
 .progress {
@@ -547,7 +548,7 @@ a:focus {
 
 
 .about_section {
-  background-color: #f3f0f6;
+  background-color: #fcfcfc;
 }
 
 .about_section .row {
