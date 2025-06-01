@@ -24,6 +24,7 @@
 
   <!-- Font Awesome pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
@@ -260,91 +261,121 @@
 
   <!-- end about section -->
 
-  <section class="competences-section layout_padding" id="skills">
-    <div class="container">
-      <div class="heading_container text-center mb-5">
-        <h2>Mes <span class="glow">Compétences</span></h2>
-      </div>
+ <!-- Compétences Section -->
+<section class="skills-section layout_padding">
+  <div class="container">
+    <h2 class="skills-title">
+      Mes Compétences
+    </h2>
+    
+    <!-- Hard Skills -->
+    <div class="hard-skills">
+      <h3 class="text-2xl font-semibold mb-8 text-center" style="color: var(--neon); border-bottom: 2px solid var(--neon-light); padding-bottom: 10px;">
+        Hard Skills
+      </h3>
       
-      <div class="row">
-        <!-- Compétence 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="competence-item h-100">
-            <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>Pentesting</span>
-                <span>85%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 85%;"></div>
-              </div>
-            </div>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>Sécurité Réseau</span>
-                <span>80%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 80%;"></div>
-              </div>
-            </div>
+      <div class="skills-grid">
+        <!-- Python -->
+        <div class="skill-circle" style="--percentage: 85; --color: #3776AB;">
+          <div class="skill-content">
+            <i class="fab fa-python text-3xl mb-1" style="color: #3776AB;"></i>
+            <div class="skill-percentage">85%</div>
+            <div class="text-sm">Python</div>
           </div>
         </div>
         
-        <!-- Compétence 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="competence-item h-100">
-            <h3><i class="fas fa-code"></i> Développement</h3>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>Python</span>
-                <span>90%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 90%;"></div>
-              </div>
-            </div>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>JavaScript</span>
-                <span>75%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 75%;"></div>
-              </div>
-            </div>
+        <!-- HTML -->
+        <div class="skill-circle" style="--percentage: 90; --color: #E34F26;">
+          <div class="skill-content">
+            <i class="fab fa-html5 text-3xl mb-1" style="color: #E34F26;"></i>
+            <div class="skill-percentage">90%</div>
+            <div class="text-sm">HTML</div>
           </div>
         </div>
         
-        <!-- Compétence 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="competence-item h-100">
-            <h3><i class="fas fa-network-wired"></i> Réseaux</h3>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>Administration</span>
-                <span>85%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 85%;"></div>
-              </div>
-            </div>
-            <div class="jauge-container">
-              <div class="jauge-label">
-                <span>Cloud</span>
-                <span>70%</span>
-              </div>
-              <div class="jauge">
-                <div class="progress" style="width: 70%;"></div>
-              </div>
-            </div>
+        <!-- CSS -->
+        <div class="skill-circle" style="--percentage: 80; --color: #2965F1;">
+          <div class="skill-content">
+            <i class="fab fa-css3-alt text-3xl mb-1" style="color: #2965F1;"></i>
+            <div class="skill-percentage">80%</div>
+            <div class="text-sm">CSS</div>
+          </div>
+        </div>
+        
+        <!-- Java -->
+        <div class="skill-circle" style="--percentage: 70; --color: #007396;">
+          <div class="skill-content">
+            <i class="fab fa-java text-3xl mb-1" style="color: #007396;"></i>
+            <div class="skill-percentage">70%</div>
+            <div class="text-sm">Java</div>
+          </div>
+        </div>
+        
+        <!-- Git/GitHub -->
+        <div class="skill-circle" style="--percentage: 75; --color: #181717;">
+          <div class="skill-content">
+            <i class="fab fa-github text-3xl mb-1" style="color: #181717;"></i>
+            <div class="skill-percentage">75%</div>
+            <div class="text-sm">GitHub</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
+    
+    <!-- Soft Skills -->
+    <div class="soft-skills">
+      <h3 class="text-2xl font-semibold mb-8 text-center" style="color: var(--neon); border-bottom: 2px solid var(--neon-light); padding-bottom: 10px;">
+        Soft Skills
+      </h3>
+      
+      <div class="soft-skills-grid">
+        <div class="soft-skill-card">
+          <h4 class="soft-skill-title">
+            <i class="fas fa-comments"></i> Communication
+          </h4>
+          <ul class="soft-skill-list">
+            <li class="soft-skill-item">Capacité à expliquer des concepts techniques à des non-techniciens</li>
+            <li class="soft-skill-item">Présentations claires et structurées</li>
+            <li class="soft-skill-item">Écoute active et feedback constructif</li>
+          </ul>
+        </div>
+        
+        <div class="soft-skill-card">
+          <h4 class="soft-skill-title">
+            <i class="fas fa-users"></i> Travail d'équipe
+          </h4>
+          <ul class="soft-skill-list">
+            <li class="soft-skill-item">Collaboration efficace avec différents profils</li>
+            <li class="soft-skill-item">Adaptabilité aux méthodes agiles</li>
+            <li class="soft-skill-item">Partage des connaissances</li>
+          </ul>
+        </div>
+        
+        <div class="soft-skill-card">
+          <h4 class="soft-skill-title">
+            <i class="fas fa-lightbulb"></i> Résolution de problèmes
+          </h4>
+          <ul class="soft-skill-list">
+            <li class="soft-skill-item">Approche analytique et méthodique</li>
+            <li class="soft-skill-item">Créativité dans les solutions proposées</li>
+            <li class="soft-skill-item">Persévérance face aux défis techniques</li>
+          </ul>
+        </div>
+        
+        <div class="soft-skill-card">
+          <h4 class="soft-skill-title">
+            <i class="fas fa-clock"></i> Gestion du temps
+          </h4>
+          <ul class="soft-skill-list">
+            <li class="soft-skill-item">Respect des délais</li>
+            <li class="soft-skill-item">Priorisation des tâches</li>
+            <li class="soft-skill-item">Adaptation aux changements de priorités</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</section>
+        
 
   <!-- blog section -->
 

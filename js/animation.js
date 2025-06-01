@@ -61,3 +61,25 @@ document.addEventListener('DOMContentLoaded', function() {
         'linear'
       );
     });
+
+
+
+  // Animation for skill circles
+  document.addEventListener('DOMContentLoaded', function() {
+    const circles = document.querySelectorAll('.skill-circle');
+    
+    circles.forEach(circle => {
+      // Get the percentage from the style attribute
+      const style = circle.getAttribute('style');
+      const percentageMatch = style.match(/--percentage:\s*(\d+)/);
+      const percentage = percentageMatch ? percentageMatch[1] : 0;
+      
+      // Reset to 0 for animation
+      circle.style.setProperty('--percentage', '0');
+      
+      // Animate to the actual percentage
+      setTimeout(() => {
+        circle.style.setProperty('--percentage', percentage);
+      }, 100);
+    });
+});

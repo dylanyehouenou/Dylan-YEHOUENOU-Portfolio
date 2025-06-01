@@ -5,6 +5,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+    --neon-blue: #0ff0fc;
+            --neon-pink: #ff2ced;
+            --neon-purple: #9600ff;
+            --dark-bg: #0a0a1a;
   --primary: #6C4AB6;    /* Couleur principale violette */
   --secondary: #8D72E1;  /* Couleur secondaire */
   --accent: #B9E0FF;     /* Couleur d'accent bleu clair */
