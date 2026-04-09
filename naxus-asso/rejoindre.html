@@ -330,18 +330,33 @@
         });
     });
 
-    // Form submit simulation
+    // Form submit simulation & mailto trigger
     document.getElementById('adhesion-form').addEventListener('submit', (e) => {
         e.preventDefault();
         const prenom = document.getElementById('prenom').value;
+        const nom = document.getElementById('nom').value;
         const email  = document.getElementById('email').value;
+        const type = document.getElementById('type').value;
+        const profil = document.getElementById('profil').value;
+        const message = document.getElementById('message').value;
         const cgu    = document.getElementById('cgu').checked;
+
         if (!prenom || !email || !cgu) {
             alert('Merci de remplir les champs obligatoires (Prénom, Email) et d\'accepter les CGU.');
             return;
         }
+
         document.getElementById('adhesion-form').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
+
+        const bodyText = `Nouvelle demande d'adhésion NAXUS%0A%0A`
+            + `Nom : ${prenom} ${nom}%0A`
+            + `Email : ${email}%0A`
+            + `Type cible : ${type}%0A`
+            + `Profil : ${profil}%0A`
+            + `Présentation : ${message}%0A`;
+
+        window.location.href = `mailto:contact@naxus-asso.fr?subject=Nouvelle candidature : ${prenom} ${nom}&body=${bodyText}`;
     });
 </script>
 </body>

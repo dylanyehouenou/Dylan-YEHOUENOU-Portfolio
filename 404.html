@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <title>404 — Page Introuvable | Portfolio Dylan YEHOUENOU</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <style>
@@ -37,10 +40,27 @@
         }
 
         @keyframes glitch-404 {
-            0%, 92%, 100% { transform: none; }
-            93% { transform: translate(-3px, 1px) skewX(-1deg); color: var(--secondary-color); }
-            95% { transform: translate(3px, -1px) skewX(1deg); color: var(--accent-color); }
-            97% { transform: translate(-2px, 2px); color: var(--primary-color); }
+
+            0%,
+            92%,
+            100% {
+                transform: none;
+            }
+
+            93% {
+                transform: translate(-3px, 1px) skewX(-1deg);
+                color: var(--secondary-color);
+            }
+
+            95% {
+                transform: translate(3px, -1px) skewX(1deg);
+                color: var(--accent-color);
+            }
+
+            97% {
+                transform: translate(-2px, 2px);
+                color: var(--primary-color);
+            }
         }
 
         .error-label {
@@ -89,10 +109,13 @@
         }
 
         @keyframes rotate-cross {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- ====== NAVIGATION ====== -->
     <header>
@@ -114,7 +137,8 @@
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"><span class="toggle-thumb"><span class="toggle-icon">🌙</span></span></button>
+            <button id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"><span
+                    class="toggle-thumb"><span class="toggle-icon">🌙</span></span></button>
         </nav>
     </header>
 
@@ -141,7 +165,8 @@
             <div class="footer-col">
                 <h3 class="footer-title">Transmission</h3>
                 <ul class="terminal-list">
-                    <li><span class="label">EMAIL:</span> <a href="mailto:dylanyehouenou344@gmail.com" class="glitch-link">dylanyehouenou344@gmail.com</a></li>
+                    <li><span class="label">EMAIL:</span> <a href="mailto:dylanyehouenou344@gmail.com"
+                            class="glitch-link">dylanyehouenou344@gmail.com</a></li>
                 </ul>
             </div>
             <div class="footer-col sys-status">
@@ -156,4 +181,5 @@
     <script src="js/script.js"></script>
     <script src="js/background.js"></script>
 </body>
+
 </html>

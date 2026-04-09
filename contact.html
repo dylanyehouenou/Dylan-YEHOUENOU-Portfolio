@@ -73,9 +73,8 @@
             </div>
             
             <div class="contact-container">
-                <!-- Formulaire connecté à FormSpree pour la réception des mails -->
-                <!-- Remplacer TON_ID par votre identifiant de formulaire (créé sur Formspree.io) -->
-                <form action="https://formspree.io/f/TON_ID" method="POST" class="cyber-form reveal">
+                <!-- Formulaire avec simulation d'envoi et mailto -->
+                <form id="contactForm" class="cyber-form reveal">
                     <div class="form-group">
                         <input type="text" name="name" id="name" class="cyber-input" placeholder="ID_Utilisateur" required>
                     </div>
@@ -85,7 +84,9 @@
                     <div class="form-group">
                         <textarea name="message" id="message" class="cyber-input textarea" rows="5" placeholder="Paquet_de_Données" required></textarea>
                     </div>
-                    <button type="submit" class="cyber-btn"><span>Lancer_Transmission</span></button>
+                    <button type="submit" class="cyber-btn" id="submitBtn"><span>Lancer_Transmission</span></button>
+                    <!-- Message de succès -->
+                    <div id="form-success" class="glitch-text" style="display:none; color:#00ffcc; margin-top:20px; font-weight: bold; background: rgba(0, 255, 204, 0.1); padding: 10px; border-left: 3px solid #00ffcc;">[✓ TRANSMISSION RÉUSSIE] Données envoyées au réseau.</div>
                 </form>
             </div>
         </section>
