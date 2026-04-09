@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Les projets collaboratifs et open source de l'association NAXUS à Lyon.">
+    <title>Projets | NAXUS Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="assets/images/logo_naxus_neon.png" alt="Logo NAXUS" class="nav-logo-svg" style="border-radius: 8px; object-fit: cover;">
+            <div class="nav-logo-text"><span class="nav-logo-name">NAXUS</span><span class="nav-logo-sub">Association</span></div>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="apropos.html">À propos</a>
+            <a href="projets.html" class="active">Projets</a>
+            <a href="evenements.html">Événements</a>
+            <a href="rejoindre.html">Nous rejoindre</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-btn" id="theme-btn" aria-label="Thème">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="icon-sun"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </button>
+            <a href="rejoindre.html" class="btn-primary">Nous rejoindre →</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section class="section">
+    <div class="section-center" style="margin-bottom:56px;">
+        <span class="section-tag">Open Source</span>
+        <h1 class="section-title">Nos Projets</h1>
+        <p class="section-desc">NAXUS développe des projets concrets, open source et orientés impact. Chacun peut y contribuer, quel que soit son niveau.</p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Stats contribution -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-bottom:60px;">
+        <div style="text-align:center;padding:24px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);" class="reveal">
+            <div style="font-size:32px;font-weight:700;color:var(--blue);"><span data-count="4">0</span></div>
+            <div style="font-size:12px;color:var(--text-2);font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;">Projets actifs</div>
+        </div>
+        <div style="text-align:center;padding:24px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);" class="reveal reveal-delay-1">
+            <div style="font-size:32px;font-weight:700;color:var(--teal);"><span data-count="42">0</span>+</div>
+            <div style="font-size:12px;color:var(--text-2);font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;">Contributeurs</div>
+        </div>
+        <div style="text-align:center;padding:24px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);" class="reveal reveal-delay-2">
+            <div style="font-size:32px;font-weight:700;color:var(--purple);"><span data-count="100">0</span>%</div>
+            <div style="font-size:12px;color:var(--text-2);font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;">Open source</div>
+        </div>
+        <div style="text-align:center;padding:24px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-md);" class="reveal reveal-delay-3">
+            <div style="font-size:32px;font-weight:700;color:var(--orange);"><span data-count="0">0</span>€</div>
+            <div style="font-size:12px;color:var(--text-2);font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;">Coût d'accès</div>
+        </div>
+    </div>
+
+    <!-- Projets principaux -->
+    <div class="grid-2" style="margin-bottom:60px;">
+        <div class="card reveal" style="border-left:3px solid var(--blue);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+                <div class="card-icon" style="background:rgba(55,138,221,0.12);border-color:rgba(55,138,221,0.3);">🛡️</div>
+                <span class="tag" style="color:var(--teal);border-color:rgba(29,158,117,0.35);">En cours</span>
+            </div>
+            <h3>NAXUS Cyber Watch</h3>
+            <p style="margin-bottom:16px;">Plateforme de veille cybersécurité citoyenne — agrège et vulgarise les alertes CVE pour le grand public lyonnais. Développé lors du Hackathon #3 et porté par l'asso.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Open Source</span>
+            </div>
+            <a href="https://github.com/dydydebondy" target="_blank" rel="noopener" class="btn-secondary" style="font-size:13px;">Voir sur GitHub →</a>
+        </div>
+
+        <div class="card reveal reveal-delay-1" style="border-left:3px solid var(--teal);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+                <div class="card-icon" style="background:rgba(29,158,117,0.12);border-color:rgba(29,158,117,0.3);">📚</div>
+                <span class="tag" style="color:var(--blue);border-color:rgba(55,138,221,0.35);">Actif</span>
+            </div>
+            <h3>NAXUS Learn</h3>
+            <p style="margin-bottom:16px;">Base de ressources et tutoriels gratuits créés par les membres. Fiches pratiques, exercices et guides en développement et cybersécurité accessibles à tous.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Markdown</span>
+            </div>
+            <span class="btn-secondary" style="font-size:13px;opacity:0.6;cursor:default;display:inline-flex;">Bientôt disponible</span>
+        </div>
+
+        <div class="card reveal reveal-delay-2" style="border-left:3px solid var(--purple);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+                <div class="card-icon" style="background:rgba(127,119,221,0.12);border-color:rgba(127,119,221,0.3);">♻️</div>
+                <span class="tag" style="color:var(--purple);border-color:rgba(127,119,221,0.35);">Planifié</span>
+            </div>
+            <h3>Tech Repair Lyon</h3>
+            <p style="margin-bottom:16px;">Initiative de réparation et recyclage de matériel informatique au profit des associations lyonnaises. Ateliers de remise en état ouverts à tous, animés par les membres NAXUS.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                <span class="tag">Hardware</span><span class="tag">Communauté</span><span class="tag">Lyon</span>
+            </div>
+            <a href="rejoindre.html" class="btn-secondary" style="font-size:13px;">Participer →</a>
+        </div>
+
+        <div class="card reveal reveal-delay-3" style="border-left:3px solid var(--orange);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
+                <div class="card-icon" style="background:rgba(239,159,39,0.12);border-color:rgba(239,159,39,0.3);">🌍</div>
+                <span class="tag" style="color:var(--orange);border-color:rgba(239,159,39,0.35);">Idée</span>
+            </div>
+            <h3>Portfolio Client Builder</h3>
+            <p style="margin-bottom:16px;">Outil no-code permettant aux membres de créer des portfolios professionnels pour leurs clients, basé sur les templates HTML/CSS développés au sein de l'asso.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+            <a href="rejoindre.html" class="btn-secondary" style="font-size:13px;">Contribuer →</a>
+        </div>
+    </div>
+
+    <!-- CTA contribuer -->
+    <div style="background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-md);padding:48px;text-align:center;" class="reveal">
+        <h2 style="font-size:24px;margin-bottom:12px;">Tu as une idée de projet ?</h2>
+        <p style="color:var(--text-2);max-width:440px;margin:0 auto 24px;line-height:1.75;font-size:15px;">NAXUS est une association collaborative. Si tu as un projet qui répond à notre mission, on veut l'entendre !</p>
+        <a href="rejoindre.html" class="btn-primary">Proposer un projet →</a>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="index.html" class="nav-logo" style="display:inline-flex;margin-bottom:12px;">
+                <img src="assets/images/logo_naxus_neon.png" alt="Logo NAXUS footer" width="28" height="28" style="flex-shrink:0; border-radius: 6px; object-fit: cover;">
+                <span style="font-weight:700;font-size:15px;margin-left:10px;color:var(--text-1);">NAXUS</span>
+            </a>
+            <p>Association loi 1901 dédiée à l'inclusion numérique, la formation et le partage des savoirs informatiques à Lyon.</p>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html">À propos</a></li><li><a href="projets.html">Projets</a></li><li><a href="evenements.html">Événements</a></li></ul></div>
+        <div class="footer-col"><h4>Rejoindre</h4><ul><li><a href="rejoindre.html">Adhésion membre</a></li><li><a href="rejoindre.html#partenaire">Devenir partenaire</a></li><li><a href="rejoindre.html#benevole">Bénévolat</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@naxus-asso.fr">contact@naxus-asso.fr</a></li><li><a href="http://www.linkedin.com/in/dylan-yehouenou" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/dydydebondy" target="_blank" rel="noopener">GitHub</a></li><li><a href="../index.html" style="color:var(--blue);">← Retour au Portfolio</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 NAXUS — Association loi 1901 · Lyon, France</p>
+        <p style="color:var(--text-3);">Fondée par Dylan YEHOUENOU</p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

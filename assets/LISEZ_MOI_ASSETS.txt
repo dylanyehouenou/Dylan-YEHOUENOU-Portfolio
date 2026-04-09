@@ -1,0 +1,39 @@
+=======================================================
+ DOSSIER ASSETS — Portfolio Dylan YEHOUENOU
+ Dépose tes fichiers ici pour compléter le site
+=======================================================
+
+📁 assets/images/
+------------------
+• profile.jpg       → Ta photo de profil (affichée dans about.html)
+                      Taille recommandée : 600×800px ou 1:1
+                      Format : JPG ou PNG
+
+• og-preview.png    → Image de prévisualisation pour les réseaux sociaux
+                      (LinkedIn, WhatsApp, etc.)
+                      Taille obligatoire : 1200×630px (format paysage)
+                      Format : PNG
+
+📁 assets/docs/
+------------------
+• cv.pdf            → Ton CV au format PDF
+                      Ce fichier sera lié au bouton "Télécharger le PDF"
+                      dans cv.html
+
+=======================================================
+ APRÈS AVOIR DÉPOSÉ TES FICHIERS :
+=======================================================
+
+1. Pour la photo — dans about.html, remplace :
+   src="profile.jpg"
+   par :
+   src="assets/images/profile.jpg"
+
+2. Pour le CV PDF — dans cv.html, remplace :
+   href="#"
+   du bouton de téléchargement par :
+   href="assets/docs/cv.pdf" download
+
+3. Pour l'image OG, elle sera automatiquement utilisée
+   dans les balises <meta og:image> déjà en place.
+=======================================================

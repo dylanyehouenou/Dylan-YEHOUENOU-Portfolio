@@ -1,0 +1,300 @@
+/* ---------------------------------------- */
+/* CV.CSS - Page Curriculum Vitae           */
+/* ---------------------------------------- */
+
+.cv-section {
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 5rem 8% 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* En-tête du CV */
+.cv-header {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 6px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.08);
+}
+
+.cv-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+    margin-bottom: 0.4rem;
+}
+
+.cv-title {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.cv-title .sep {
+    opacity: 0.4;
+    margin: 0 0.5rem;
+}
+
+.cv-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    text-align: right;
+}
+
+.cv-contacts a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cv-contacts a:hover { color: #fff; }
+
+/* Corps du CV en 2 colonnes */
+.cv-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Bloc de section (Formation, Skills...) */
+.cv-block {
+    margin-bottom: 2.5rem;
+}
+
+.cv-block-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.cv-cyan    { color: var(--primary-color);   }
+.cv-magenta { color: var(--secondary-color); }
+.cv-yellow  { color: #ffaa00;                }
+
+/* Item (poste ou formation) */
+.cv-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--glass-border);
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+.cv-item:hover {
+    border-left-color: var(--primary-color);
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.2rem;
+}
+
+.cv-item-header strong {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.cv-date {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    color: var(--secondary-color);
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid rgba(185,0,255,0.25);
+    border-radius: 3px;
+    background: rgba(185,0,255,0.06);
+}
+
+.cv-place {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+    margin-bottom: 0.4rem;
+}
+
+.cv-item p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+/* Barres de compétences */
+.cv-skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cv-skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--text-color);
+}
+
+.cv-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 99px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.cv-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+/* Tags Soft Skills */
+.cv-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.cv-tag {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background: rgba(185,0,255,0.07);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+    clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+    transition: background 0.3s, color 0.3s;
+    cursor: default;
+}
+
+.cv-tag:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+/* Projets */
+.cv-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cv-project {
+    font-size: 0.92rem;
+    padding: 0.6rem 1rem;
+    background: rgba(0,0,0,0.3);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 0 3px 3px 0;
+    line-height: 1.5;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.cv-project:hover { opacity: 1; }
+.cv-project strong { color: var(--primary-color); }
+
+/* Bouton de téléchargement */
+.cv-download {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* Colonne de profil */
+.cv-left > .cv-block:first-child p {
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .cv-body {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cv-contacts { text-align: center; }
+}
+
+@media screen and (max-width: 600px) {
+    .cv-section { padding: 3rem 5% 3rem; }
+}
+
+/* ================================================================ */
+/* --- @MEDIA PRINT — Impression propre du CV                   --- */
+/* ================================================================ */
+@media print {
+    /* Masquer les éléments non pertinents à l'impression */
+    header, footer, .scanline, #bg-canvas, .cv-download, body::before { display: none !important; }
+
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        padding-top: 0 !important;
+        font-size: 11pt;
+        animation: none !important;
+    }
+
+    .cv-section {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .cv-header {
+        background: none !important;
+        border: 1px solid #ccc !important;
+        border-left: 3px solid #000 !important;
+        box-shadow: none !important;
+    }
+
+    .cv-name { color: #000 !important; text-shadow: none !important; }
+    .cv-block-title { color: #333 !important; }
+    .cv-date { color: #555 !important; border-color: #ccc !important; background: none !important; }
+    .cv-place { color: #333 !important; }
+    .cv-contacts, .cv-contacts a { color: #000 !important; }
+    .cv-tag { border-color: #999 !important; color: #333 !important; background: none !important; clip-path: none !important; }
+    .cv-project { background: none !important; border-left-color: #000 !important; }
+    .cv-project strong { color: #000 !important; }
+
+    .cv-bar { background: #eee !important; border-color: #ddd !important; }
+    .cv-bar-fill { box-shadow: none !important; }
+
+    /* Évite les coupures de page dans les blocs */
+    .cv-item, .cv-block { break-inside: avoid; }
+
+    /* Affiche les URLs des liens */
+    a::after { content: " (" attr(href) ")"; font-size: 9pt; color: #555; }
+}

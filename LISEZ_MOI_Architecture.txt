@@ -1,0 +1,47 @@
+# ========================================================
+# LISEZ_MOI : Architecture Cyberpunk Multi-Pages
+# ========================================================
+
+Ce document décrit la nouvelle architecture modulaire de votre portfolio. L'objectif est de séparer la page unique (Single Page Application) en plusieurs fichiers distincts pour améliorer la maintenabilité, les performances et l'organisation du code.
+
+## 1. Rôle des Fichiers et Pages
+
+L'architecture est structurée avec des fichiers globaux et des fichiers spécifiques à chaque page :
+
+### Fichiers Globaux :
+- **style.css** : Contient toutes les variables de thème (couleurs néon, fonds), la stylisation de la typographie, la barre de navigation <nav>, le footer <footer>, et les effets globaux (ex: .scanline).
+- **script.js** : Gère la logique applicable à tout le site (changement de thème Clair/Sombre, animation de la navbar au scroll).
+
+### Nouvelles Pages Spécifiques :
+Chaque page possède son trio (HTML, CSS, JS) :
+1. **Accueil (index.html, index.css, index.js)**
+   - Rôle : Écran de démarrage, séquence de boot cybernétique "SYSTEM BOOT...", et présentation Hero interactif.
+2. **À propos (about.html, about.css, about.js)**
+   - Rôle : Afficher votre paragraphe de présentation et votre image de profil cyberpunk.
+3. **Formations (formation.html, formation.css, formation.js)**
+   - Rôle : Timeline de votre parcours académique.
+4. **Expériences (experience.html, experience.css, experience.js)**
+   - Rôle : Timeline de vos expériences professionnelles (ex: Auto-Formation, Bibliothécaire).
+5. **Compétences (skills.html, skills.css, skills.js)**
+   - Rôle : Barres de progression lumineuses (Hard Skills), datachips de Soft Skills et jauges de Langues.
+6. **Projets (projects.html, projects.css, projects.js)**
+   - Rôle : Répertoire de vos réalisations sous forme de cartes holographiques (applications et sites).
+7. **Contact (contact.html, contact.css, contact.js)**
+   - Rôle : Interface de Terminal pour vous envoyer un message (via Formspree).
+
+## 2. Interaction entre les fichiers
+
+Chaque fichier HTML suit ce modèle strict :
+1. **Méta/Typographie** : Dans le <head>, il importe les polices Google Fonts.
+2. **Styles** : Il importe `style.css` (global) d'abord, PUIS son propre fichier `nomdelapage.css` pour les spécificités.
+3. **Composants Communs** : La balise `<nav>` (navigation) et `<footer>` (pied de page) doivent s'y trouver à l'identique.
+4. **Scripts** : En fin de `<body>`, il importe d'abord `script.js` (global) puis `nomdelapage.js`.
+
+## 3. Conseils de Maintenance (Très Important)
+
+- **Modification de la barre de navigation ou du footer** : 
+  Étant donné que vous utilisez du HTML pur sans base de données ou framework (PHP, React, etc.), chaque fois que vous ajoutez un nouveau lien dans le menu de navigation (le `<nav>`) ou changez une info de contact dans le `<footer>`, **vous devrez faire cette même modification de copier-coller dans les 7 fichiers HTML**.
+- **Gestion du THÈME (Clair/Sombre)** :
+  Le fichier `script.js` enregistre votre préférence dans le "LocalStorage" de votre navigateur. Si vous changez de page, le thème restera le même (car l'attribut data-theme="dark/light" est appliqué au chargement).
+- **Organisation CSS** :
+  Ne mettez jamais les styles de base (comme `body { background: ... }`) dans les fichiers spécifiques (ex: `about.css`). Ces fichiers ne doivent servir qu'à styliser les éléments uniques à cette page pour éviter la redondance.

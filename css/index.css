@@ -1,0 +1,114 @@
+/* ---------------------------------------- */
+/* INDEX.CSS - Page d'Accueil (Hero)        */
+/* ---------------------------------------- */
+
+/* --- Zone Hero --- */
+.hero {
+    min-height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 5%;
+}
+
+/* Grande Grille Cyber en perspective (décoration de fond) */
+.cyber-grid {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 45%;
+    background:
+        linear-gradient(transparent 0%, var(--bg-color) 100%),
+        linear-gradient(90deg, rgba(0, 255, 204, 0.07) 1px, transparent 1px),
+        linear-gradient(rgba(0, 255, 204, 0.07) 1px, transparent 1px);
+    background-size: 100% 100%, 45px 45px, 45px 45px;
+    transform: perspective(600px) rotateX(55deg);
+    transform-origin: bottom center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Conteneur de tout le contenu du Hero */
+.hero-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Grand Titre Glitch */
+.hero-content .glitch-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 900;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+    white-space: nowrap;
+}
+
+/* Zone machine à écrire (terminal) */
+.typewriter-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    padding: 0.75rem 1.4rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.prompt {
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.typing {
+    color: var(--primary-color);
+}
+
+.cursor {
+    animation: blink-cursor 0.9s step-end infinite;
+    color: var(--primary-color);
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Boutons d'action Hero */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ---------------------------------------- */
+/* Responsive Mobile Hero                   */
+/* ---------------------------------------- */
+@media screen and (max-width: 600px) {
+    .hero-content .glitch-title {
+        white-space: normal;
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .typewriter-container {
+        flex-wrap: wrap;
+        white-space: normal;
+        font-size: 0.8rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

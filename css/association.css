@@ -1,0 +1,419 @@
+/* ---------------------------------------- */
+/* ASSOCIATION.CSS - Page Association       */
+/* ---------------------------------------- */
+
+.asso-section {
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 5rem 8% 4rem;
+}
+
+/* ======================================== */
+/* Hero de l'association                    */
+/* ======================================== */
+.asso-hero {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.asso-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.asso-hero .glitch-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 204, 0.35), 0 0 60px rgba(185, 0, 255, 0.2);
+}
+
+.asso-subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+.asso-desc {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    opacity: 0.85;
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+}
+
+.asso-ctas {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Badge animé (hexagone tournant) */
+.asso-badge {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    opacity: 0.4;
+}
+
+.badge-ring.outer {
+    width: 200px; height: 200px;
+    animation: spin-slow 12s linear infinite;
+    border-style: dashed;
+}
+
+.badge-ring.inner {
+    width: 140px; height: 140px;
+    animation: spin-slow 8s linear infinite reverse;
+    border-color: var(--secondary-color);
+}
+
+@keyframes spin-slow {
+    to { transform: rotate(360deg); }
+}
+
+.badge-core {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.badge-icon {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+    line-height: 1;
+}
+
+.badge-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--text-color);
+    letter-spacing: 4px;
+    text-shadow: var(--neon-glow);
+}
+
+/* ======================================== */
+/* Stats                                    */
+/* ======================================== */
+.asso-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.stat-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.stat-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.12);
+    transform: translateY(-4px);
+}
+
+.stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+    line-height: 1;
+}
+
+.stat-unit {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* ======================================== */
+/* Mission Grid (3 cartes)                  */
+/* ======================================== */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 2.5rem;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.mission-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.1);
+}
+
+.mission-card:hover::before {
+    transform: scaleX(1);
+}
+
+.mission-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+.mission-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.mission-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+/* ======================================== */
+/* Liste des événements                     */
+/* ======================================== */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.event-item {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.event-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 1rem;
+    background: rgba(0, 255, 204, 0.06);
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    border-radius: 4px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.event-day {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+    text-shadow: var(--neon-glow);
+}
+
+.event-month {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+}
+
+.event-year {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    opacity: 0.55;
+    letter-spacing: 1px;
+}
+
+.event-info h3 {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 0.6rem;
+}
+
+.event-info p {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.event-tag {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.75rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 99px;
+    color: var(--primary-color);
+    background: rgba(0, 255, 204, 0.06);
+    margin-right: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* ======================================== */
+/* CTA Rejoindre                            */
+/* ======================================== */
+.asso-join {
+    background: linear-gradient(135deg, rgba(0, 255, 204, 0.06), rgba(185, 0, 255, 0.06));
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 4rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.asso-join::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 204, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.join-content {
+    position: relative;
+    z-index: 1;
+}
+
+.join-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.join-content p {
+    font-size: 1.05rem;
+    opacity: 0.8;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+/* ======================================== */
+/* Responsive                               */
+/* ======================================== */
+@media screen and (max-width: 1100px) {
+    .asso-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .asso-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    .asso-badge { margin: 0 auto; }
+    .asso-ctas { justify-content: center; }
+    .asso-desc { max-width: 100%; }
+    .asso-stats { grid-template-columns: repeat(2, 1fr); }
+    .mission-grid { grid-template-columns: 1fr; }
+    .event-item { flex-direction: column; gap: 1.5rem; }
+    .event-date { flex-direction: row; gap: 0.5rem; width: 100%; justify-content: flex-start; }
+}
+
+@media screen and (max-width: 480px) {
+    .asso-section { padding: 3rem 5%; }
+    .asso-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .asso-join { padding: 3rem 1.5rem; }
+}
+
+/* -------------------------------------------------- */
+/* Logo NAXUS SVG (réseau de nœuds)                  */
+/* -------------------------------------------------- */
+.naxus-logo-svg {
+    width: 220px;
+    height: 220px;
+    filter: drop-shadow(0 0 18px rgba(0, 255, 204, 0.35));
+    animation: logo-float 4s ease-in-out infinite;
+}
+
+@keyframes logo-float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-10px); }
+}
+
+/* Animations de pulsation des nœuds */
+@keyframes node-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
+
+.node-pulse-1 { animation: node-pulse 2.4s ease-in-out infinite; }
+.node-pulse-2 { animation: node-pulse 2.4s ease-in-out infinite 0.48s; }
+.node-pulse-3 { animation: node-pulse 2.4s ease-in-out infinite 0.96s; }
+.node-pulse-4 { animation: node-pulse 2.4s ease-in-out infinite 1.44s; }
+.node-pulse-5 { animation: node-pulse 2.4s ease-in-out infinite 1.92s; }

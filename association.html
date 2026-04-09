@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Association NAXUS — Collectif de jeunes développeurs et passionnés de technologie, fondé par Dylan YEHOUENOU.">
+    <meta name="author" content="Dylan YEHOUENOU">
+    <title>Association | Portfolio Dylan YEHOUENOU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/association.css">
+    <!-- Open Graph / Partage Social -->
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="fr_FR">
+    <meta property="og:site_name"   content="Portfolio Dylan YEHOUENOU">
+    <meta property="og:title"       content="Association | Portfolio Dylan YEHOUENOU">
+    <meta property="og:description" content="Découvrez NAXUS, le collectif technologique fondé par Dylan YEHOUENOU.">
+    <meta property="og:image"       content="assets/images/profile.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Association | Portfolio Dylan YEHOUENOU">
+    <meta name="twitter:description" content="Découvrez NAXUS, le collectif technologique fondé par Dylan YEHOUENOU.">
+    <meta name="twitter:image"       content="assets/images/profile.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.svg">
+</head>
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" class="nav-brand">PORTFOLIO</a>
+        <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="formation.html">Formations</a></li>
+                <li><a href="experience.html">Expériences</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="association.html" class="active">Association</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"><span class="toggle-thumb"><span class="toggle-icon">🌙</span></span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="grid-section" style="display:flex; align-items:center; justify-content:center; min-height:calc(100vh - var(--navbar-height) - 200px);">
+            <div style="text-align:center; max-width:640px; padding:0 20px;">
+
+                <!-- Logo NAXUS SVG -->
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:140px;height:140px;filter:drop-shadow(0 0 24px rgba(0,255,204,0.4));animation:logo-float 4s ease-in-out infinite;margin-bottom:24px;">
+                    <line x1="60" y1="60" x2="26" y2="28" stroke="var(--primary-color)"   stroke-width="1.4" opacity="0.7"/>
+                    <line x1="60" y1="60" x2="94" y2="28" stroke="var(--secondary-color)" stroke-width="1.4" opacity="0.7"/>
+                    <line x1="60" y1="60" x2="22" y2="84" stroke="#00ff88" stroke-width="1.4" opacity="0.7"/>
+                    <line x1="60" y1="60" x2="98" y2="84" stroke="var(--accent-color)"    stroke-width="1.4" opacity="0.7"/>
+                    <line x1="60" y1="60" x2="60" y2="102" stroke="#ffaa00"               stroke-width="1.4" opacity="0.7"/>
+                    <circle class="node-pulse-1" cx="26" cy="28" r="7" fill="none" stroke="var(--primary-color)"   stroke-width="1.5"/>
+                    <circle class="node-pulse-2" cx="94" cy="28" r="7" fill="none" stroke="var(--secondary-color)" stroke-width="1.5"/>
+                    <circle class="node-pulse-3" cx="22" cy="84" r="6" fill="none" stroke="#00ff88"                stroke-width="1.5"/>
+                    <circle class="node-pulse-4" cx="98" cy="84" r="6" fill="none" stroke="var(--accent-color)"    stroke-width="1.5"/>
+                    <circle class="node-pulse-5" cx="60" cy="102" r="6" fill="none" stroke="#ffaa00"               stroke-width="1.5"/>
+                    <circle cx="60" cy="60" r="20" fill="none" stroke="var(--primary-color)" stroke-width="2" opacity="0.9"/>
+                    <text x="60" y="56" font-family="'Orbitron', monospace" font-size="10" font-weight="700" fill="var(--primary-color)" text-anchor="middle" letter-spacing="1">NAXUS</text>
+                    <text x="60" y="68" font-family="'Courier New', monospace" font-size="6.5" fill="var(--primary-color)" text-anchor="middle" opacity="0.7" letter-spacing="2">ASSO.</text>
+                </svg>
+
+                <p class="asso-tag" style="margin-bottom:16px;">// COLLECTIF TECHNOLOGIQUE · ASSOCIATION LOI 1901</p>
+                <h1 class="glitch-title" data-text="NAXUS" style="font-size:clamp(36px,8vw,72px);margin-bottom:16px;">NAXUS</h1>
+                <p style="color:var(--text-secondary, rgba(255,255,255,0.6));font-size:16px;line-height:1.8;margin-bottom:8px;">
+                    Association dédiée à l'inclusion numérique, la formation et le partage des savoirs informatiques à Lyon.
+                </p>
+                <p style="color:var(--primary-color);font-family:'Orbitron',sans-serif;font-size:11px;letter-spacing:3px;margin-bottom:40px;">YNOV CAMPUS LYON · FONDÉE EN 2024</p>
+
+                <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+                    <a href="naxus-asso/index.html" class="cyber-btn" style="text-decoration:none;">
+                        <span>Accéder au Site NAXUS →</span>
+                    </a>
+                    <a href="naxus-asso/rejoindre.html" class="cyber-btn secondary" style="text-decoration:none;">
+                        <span>Nous rejoindre</span>
+                    </a>
+                </div>
+
+                <p style="margin-top:40px;font-size:12px;color:rgba(255,255,255,0.3);font-family:'Orbitron',sans-serif;letter-spacing:2px;">
+                    naxus-asso.fr · Lyon, France
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Transmission</h3>
+                <ul class="terminal-list">
+                    <li><span class="label">TEL:</span> <span class="value">+33(0) 6 34 57 21 64</span></li>
+                    <li><span class="label">EMAIL:</span> <a href="mailto:dylanyehouenou344@gmail.com" class="glitch-link">dylanyehouenou344@gmail.com</a></li>
+                    <li><span class="label">LOC:</span> <span class="value">69100, Villeurbanne / Lyon</span></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-title">Réseaux_</h3>
+                <ul class="terminal-list">
+                    <li><a href="http://www.linkedin.com/in/dylan-yehouenou" target="_blank" rel="noopener noreferrer" class="glitch-link">> LinkedIn</a></li>
+                    <li><a href="https://github.com/dydydebondy" target="_blank" rel="noopener noreferrer" class="glitch-link">> GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-col sys-status">
+                <h3 class="footer-title">Statut_Système</h3>
+                <p class="status-msg">[SYSTÈME EN LIGNE]<br>Connexion sécurisée...</p>
+                <p class="copyright">© 2024 Dylan YEHOUENOU<br>Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scanline"></div>
+    <script src="js/script.js"></script>
+    <script src="js/association.js"></script>
+    <!-- Fond animé particules (global) -->
+    <script src="js/background.js"></script>
+</body>
+</html>

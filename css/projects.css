@@ -1,0 +1,139 @@
+/* ---------------------------------------- */
+/* PROJECTS.CSS - Page Projets              */
+/* ---------------------------------------- */
+
+.projects {
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 5rem 8%;
+}
+
+.projects-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 1rem;
+    align-items: start;
+}
+
+.project-category {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-category > .category-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--glass-border);
+    letter-spacing: 1px;
+}
+
+/* Carte holographique */
+.holo-card {
+    position: relative;
+    background: var(--glass-bg);
+    border-radius: 6px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.holo-card::after {
+    content: '';
+    position: absolute;
+    top: -100%; left: -60%;
+    width: 40%; height: 250%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    transform: rotate(30deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+.holo-card:hover { transform: translateY(-7px); }
+.holo-card:hover::after { left: 130%; }
+
+/* Variantes */
+.cyan-card   { border-color: rgba(0, 255, 204, 0.22); }
+.magenta-card{ border-color: rgba(185, 0, 255, 0.22); }
+
+.cyan-card:hover   { border-color: var(--primary-color);   box-shadow: 0 10px 40px rgba(0, 255, 204, 0.18); }
+.magenta-card:hover{ border-color: var(--secondary-color); box-shadow: 0 10px 40px rgba(185, 0, 255, 0.18); }
+
+.holo-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+}
+
+.holo-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.holo-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+/* Badge de technologies */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.tech-badge {
+    font-size: 0.78rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 99px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cyan-badge {
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 255, 204, 0.35);
+    background: rgba(0, 255, 204, 0.07);
+}
+
+.magenta-badge {
+    color: var(--secondary-color);
+    border: 1px solid rgba(185, 0, 255, 0.35);
+    background: rgba(185, 0, 255, 0.07);
+}
+
+.holo-btn      { align-self: flex-start; margin-top: 0.5rem; }
+.holo-btn.inactive { opacity: 0.35; pointer-events: none; }
+
+.cyan-btn {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.cyan-btn::before { background: var(--primary-color); }
+.cyan-btn:hover   { color: #000; }
+
+.magenta-btn {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.magenta-btn::before { background: var(--secondary-color); }
+.magenta-btn:hover   { color: #fff; }
+
+.text-cyan    { color: var(--primary-color);   margin-bottom: 1.5rem; }
+.text-magenta { color: var(--secondary-color); margin-bottom: 1.5rem; }
+
+@media screen and (max-width: 900px) {
+    .projects-split { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media screen and (max-width: 600px) {
+    .projects { padding: 3rem 5%; }
+}

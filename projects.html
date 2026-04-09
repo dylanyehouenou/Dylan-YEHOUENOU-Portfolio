@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes applications et sites web interactifs codés avec Swift, HTML, CSS, JS et plus.">
+    <meta name="author" content="Dylan YEHOUENOU">
+    <!-- Titre affiché dans l'onglet du navigateur -->
+    <title>Applications & Sites | Portfolio Cyberpunk</title>
+    
+    <!-- Importation des polices Cyberpunk (Orbitron pour les titres, Rajdhani pour le texte) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Importation du fichier CSS global (Variables, Typographie de base, Structure Navbar/Footer) -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Importation du fichier CSS spécifique à la page Applications & Sites -->
+    <link rel="stylesheet" href="css/projects.css">
+    <!-- Open Graph / Partage Social -->
+    <meta property="og:type"        content="website">
+    <meta property="og:locale"      content="fr_FR">
+    <meta property="og:site_name"   content="Portfolio Dylan YEHOUENOU">
+    <meta property="og:title"       content="Projets | Portfolio Dylan YEHOUENOU">
+    <meta property="og:description" content="Mes réalisations : DJAIM, Portfolio Testeur, Portfolio Client et bien plus.">
+    <meta property="og:image"       content="assets/images/profile.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Projets | Portfolio Dylan YEHOUENOU">
+    <meta name="twitter:description" content="Mes réalisations : DJAIM, Portfolio Testeur, Portfolio Client et bien plus.">
+    <meta name="twitter:image"       content="assets/images/profile.png">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="favicon.svg">
+</head>
+<body>
+
+    <!-- ======================================================== -->
+    <!-- BARRE DE NAVIGATION (Doit être copiée-collée à l'identique dans toutes les pages) -->
+    <!-- ======================================================== -->
+    <!-- ====== NAVIGATION ====== -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" class="nav-brand">PORTFOLIO</a>
+        <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="formation.html">Formations</a></li>
+                <li><a href="experience.html">Expériences</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="association.html">Association</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"><span class="toggle-thumb"><span class="toggle-icon">🌙</span></span></button>
+        </nav>
+    </header>
+
+
+    <!-- Début du contenu spécifique à la page Applications & Sites -->
+    <main>
+
+        <!-- Projects Section - Hub Centralisé -->
+        <section id="projects" class="projects">
+            <div class="section-header center">
+                <h1 class="glitch-title" data-text="Projets_&_Réalisations">Projets_&_Réalisations</h1>
+                <div class="scanline-horizontal"></div>
+            </div>
+            
+            <div class="projects-split">
+                <!-- ================== APPLICATIONS ================== -->
+                <div class="project-category">
+                    <h3 class="category-title text-magenta">Applications_Terminales</h3>
+                    
+                    <div class="holo-card magenta-card">
+                        <div class="holo-content">
+                            <h3>DJAIM <span style="font-size:0.65rem; opacity:0.7; color:var(--secondary-color); font-family:'Orbitron',sans-serif; letter-spacing:1px; vertical-align:middle;">[ APERÇU ]</span></h3>
+                            <p>Application iOS de répertoire de films — concept en cours de développement. Découvrez l'aperçu de l'interface et des fonctionnalités envisagées.</p>
+                            <div class="tech-tags">
+                                <span class="tech-badge magenta-badge">Swift</span>
+                                <span class="tech-badge magenta-badge">Swift UI</span>
+                                <span class="tech-badge magenta-badge">Xcode</span>
+                                <span class="tech-badge" style="background:rgba(255,170,0,0.12); color:#ffaa00; border:1px solid #ffaa00;">En Développement</span>
+                            </div>
+                            <a href="https://youtube.com/shorts/JwIvw-e_zdQ" target="_blank" rel="noopener noreferrer" class="cyber-btn magenta-btn holo-btn"><span>▶ Voir l'Aperçu</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================== SITES ================== -->
+                <div class="project-category">
+                    <h3 class="category-title text-cyan">Réseaux_Sites_Web</h3>
+                    
+                    <div class="holo-card cyan-card">
+                        <div class="holo-content">
+                            <h3>Portfolio Linda C.</h3>
+                            <p>Portfolio professionnel réalisé pour une Testeuse Logiciel. Premier projet client livré avec un design soigné et une navigation fluide.</p>
+                            <div class="tech-tags">
+                                <span class="tech-badge cyan-badge">HTML</span>
+                                <span class="tech-badge cyan-badge">CSS</span>
+                                <span class="tech-badge cyan-badge">JAVA</span>
+                            </div>
+                            <a href="https://linher100106.github.io/linda-cv/" target="_blank" rel="noopener noreferrer" class="cyber-btn cyan-btn holo-btn"><span>Visiter le Site</span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="holo-card cyan-card">
+                        <div class="holo-content">
+                            <h3>Portfolio Client</h3>
+                            <p>Architecture web designée sur-mesure répondant au cahier des charges d'un client.</p>
+                            <div class="tech-tags">
+                                <span class="tech-badge cyan-badge">HTML</span>
+                                <span class="tech-badge cyan-badge">CSS</span>
+                                <span class="tech-badge cyan-badge">JS</span>
+                            </div>
+                            <a href="#" class="cyber-btn cyan-btn holo-btn inactive"><span>[EN DÉVELOPPEMENT]</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- Fin du contenu -->
+
+
+    <!-- ======================================================== -->
+    <!-- PIED DE PAGE (Terminal de Communication) -->
+    <!-- ======================================================== -->
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <!-- Colonne 1 : Coordonnées de contact direct -->
+            <div class="footer-col">
+                <h3 class="footer-title">Transmission</h3>
+                <ul class="terminal-list">
+                    <li><span class="label">TEL:</span> <span class="value">+33(0) 6 34 57 21 64</span></li>
+                    <li><span class="label">EMAIL:</span> <a href="mailto:dylanyehouenou344@gmail.com" class="glitch-link" data-text="dylanyehouenou344@gmail.com">dylanyehouenou344@gmail.com</a></li>
+                    <li><span class="label">LOC:</span> <span class="value">69100, Villeurbanne / Lyon & Agglomération</span></li>
+                </ul>
+            </div>
+            <!-- Colonne 2 : Liens professionnels externes -->
+            <div class="footer-col">
+                <h3 class="footer-title">Réseaux_</h3>
+                <ul class="terminal-list">
+                    <li><a href="http://www.linkedin.com/in/dylan-yehouenou" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn" class="glitch-link" data-text="> LinkedIn">> LinkedIn</a></li>
+                    <li><a href="https://github.com/dydydebondy" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub" class="glitch-link" data-text="> GitHub">> GitHub</a></li>
+                </ul>
+            </div>
+            <!-- Colonne 3 : Informations système et droits -->
+            <div class="footer-col sys-status">
+                <h3 class="footer-title">Statut_Système</h3>
+                <p class="status-msg">[SYSTÈME EN LIGNE] <br> Connexion sécurisée...</p>
+                <p class="copyright">© 2024 Dylan YEHOUENOU <br> Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Div pour l'effet de ligne de balayage CRT (écran ancienne génération) -->
+    <div class="scanline"></div>
+
+    <!-- Importation du fichier JS global (Gestion du Thème, Navbar Scroll) -->
+    <script src="js/script.js"></script>
+    
+    <!-- Importation du fichier JS spécifique à la page Applications & Sites -->
+    <script src="js/projects.js"></script>
+    <!-- Fond animé particules (global) -->
+    <script src="js/background.js"></script>
+</body>
+</html>

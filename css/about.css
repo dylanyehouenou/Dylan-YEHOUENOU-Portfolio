@@ -1,0 +1,63 @@
+/* ---------------------------------------- */
+/* ABOUT.CSS - Page À Propos                */
+/* ---------------------------------------- */
+
+.about-section {
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 5rem 8%;
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 5rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.about-text h2 {
+    margin-bottom: 2rem;
+}
+
+.cyber-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+}
+
+/* Image de profil */
+.about-image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cyber-image {
+    width: 100%;
+    max-width: 380px;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    filter: grayscale(70%) contrast(1.1);
+    transition: filter 0.5s ease, box-shadow 0.5s ease;
+}
+
+.cyber-image:hover {
+    filter: grayscale(0%) contrast(1);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5), 0 0 60px rgba(185, 0, 255, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    .about-image-container { order: -1; }
+    .cyber-image { max-width: 260px; margin: 0 auto; }
+}

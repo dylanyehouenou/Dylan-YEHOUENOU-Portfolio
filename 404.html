@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>404 — Page Introuvable | Portfolio Dylan YEHOUENOU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        /* ---- Page 404 cyberpunk ---- */
+        .error-section {
+            min-height: calc(100vh - var(--navbar-height));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 5%;
+            position: relative;
+        }
+
+        .error-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(7rem, 18vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            color: var(--primary-color);
+            text-shadow:
+                0 0 20px var(--primary-color),
+                0 0 60px var(--primary-color),
+                0 0 120px rgba(0, 255, 204, 0.4);
+            position: relative;
+            animation: glitch-404 3s infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes glitch-404 {
+            0%, 92%, 100% { transform: none; }
+            93% { transform: translate(-3px, 1px) skewX(-1deg); color: var(--secondary-color); }
+            95% { transform: translate(3px, -1px) skewX(1deg); color: var(--accent-color); }
+            97% { transform: translate(-2px, 2px); color: var(--primary-color); }
+        }
+
+        .error-label {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            color: var(--primary-color);
+            letter-spacing: 4px;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+
+        .error-msg {
+            font-size: 1.3rem;
+            opacity: 0.8;
+            max-width: 480px;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .error-msg code {
+            font-family: 'Courier New', monospace;
+            color: var(--secondary-color);
+            background: rgba(185, 0, 255, 0.1);
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.95em;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Croix décorative animée */
+        .glitch-cross {
+            position: absolute;
+            font-family: 'Orbitron', sans-serif;
+            opacity: 0.04;
+            font-size: 18rem;
+            color: var(--primary-color);
+            user-select: none;
+            pointer-events: none;
+            animation: rotate-cross 25s linear infinite;
+        }
+
+        @keyframes rotate-cross {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- ====== NAVIGATION ====== -->
+    <header>
+        <nav id="navbar">
+            <a href="index.html" class="nav-brand">PORTFOLIO</a>
+            <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="formation.html">Formations</a></li>
+                <li><a href="experience.html">Expériences</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="association.html">Association</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Changer le thème" title="Changer le thème"><span class="toggle-thumb"><span class="toggle-icon">🌙</span></span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="error-section">
+            <span class="glitch-cross">✕</span>
+
+            <div class="error-code">404</div>
+            <p class="error-label">// SIGNAL PERDU — FICHIER INTROUVABLE</p>
+            <p class="error-msg">
+                La page que vous cherchez n'existe pas ou a été déplacée vers un autre secteur du réseau.<br>
+                Erreur : <code>NODE_NOT_FOUND</code>
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="cyber-btn"><span>↩ Retour à l'Accueil</span></a>
+                <a href="contact.html" class="cyber-btn secondary"><span>Signaler le problème</span></a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="cyber-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-title">Transmission</h3>
+                <ul class="terminal-list">
+                    <li><span class="label">EMAIL:</span> <a href="mailto:dylanyehouenou344@gmail.com" class="glitch-link">dylanyehouenou344@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col sys-status">
+                <h3 class="footer-title">Statut_Système</h3>
+                <p class="status-msg">[ERREUR 404] — Nœud introuvable</p>
+                <p class="copyright">© 2024 Dylan YEHOUENOU</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scanline"></div>
+    <script src="js/script.js"></script>
+    <script src="js/background.js"></script>
+</body>
+</html>
