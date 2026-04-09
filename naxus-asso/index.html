@@ -278,21 +278,21 @@
             <a href="rejoindre.html" class="btn-primary">Rejoindre NAXUS →</a>
             <a href="apropos.html"   class="btn-secondary">Qui sommes-nous ?</a>
         </div>
+        <!-- Méta données Dynamiques -->
         <div class="hero-meta">
             <div class="hero-stat">
-                <strong><span data-count="42">0</span>+</strong>
+                <strong><span id="stat-membres" data-count="42">0</span>+</strong>
                 <span>Membres actifs</span>
             </div>
             <div class="hero-stat">
-                <strong><span data-count="12">0</span></strong>
-                <span>Événements</span>
+                <strong><span id="stat-evenements" data-count="0">0</span></strong>
+                <span>Événements archivés</span>
             </div>
             <div class="hero-stat">
-                <strong><span data-count="8">0</span></strong>
-                <span>Projets</span>
+                <strong><span id="stat-projets" data-count="0">0</span></strong>
+                <span>Projets publiés</span>
             </div>
-        </div>
-    </div>
+        </div>    </div>
 
     <!-- Droite — Grand logo SVG -->
     <div class="hero-right">
@@ -341,34 +341,8 @@
         </div>
         <a href="evenements.html" class="btn-secondary">Voir tous →</a>
     </div>
-    <div style="display:flex; flex-direction:column; gap:16px;">
-        <div class="event-row reveal">
-            <div class="event-date-box"><span class="ev-day">15</span><span class="ev-month">MAR</span><span class="ev-year">2025</span></div>
-            <div class="event-body">
-                <h3>Hackathon NAXUS #3 — 48h Non-Stop</h3>
-                <p>Développement d'une appli de veille cybersécurité en équipes de 4. 12 équipes, 3 projets primés.</p>
-                <div class="event-tags"><span class="tag">Hackathon</span><span class="tag">Cybersécurité</span><span class="tag">Lyon</span></div>
-            </div>
-            <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row reveal">
-            <div class="event-date-box"><span class="ev-day">02</span><span class="ev-month">FÉV</span><span class="ev-year">2025</span></div>
-            <div class="event-body">
-                <h3>Atelier Swift — Développement iOS Avancé</h3>
-                <p>Formation 6h sur Swift et SwiftUI animée par des alumni du programme Apple Foundation.</p>
-                <div class="event-tags"><span class="tag">Formation</span><span class="tag">iOS</span><span class="tag">Swift</span></div>
-            </div>
-            <span class="event-arrow">→</span>
-        </div>
-        <div class="event-row reveal">
-            <div class="event-date-box"><span class="ev-day">20</span><span class="ev-month">NOV</span><span class="ev-year">2024</span></div>
-            <div class="event-body">
-                <h3>Lancement Officiel de NAXUS 🎉</h3>
-                <p>Soirée de lancement avec présentation des membres fondateurs et premiers ateliers de découverte.</p>
-                <div class="event-tags"><span class="tag">Lancement</span><span class="tag">Communauté</span></div>
-            </div>
-            <span class="event-arrow">→</span>
-        </div>
+    <div style="background:var(--card-bg); border:1px dashed var(--border); border-radius:var(--radius-md); padding:40px; text-align:center;">
+        <p style="color:var(--text-2); font-size:15px;">Aucun événement planifié pour le moment. Restez à l'écoute !</p>
     </div>
 </section>
 

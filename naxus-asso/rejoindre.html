@@ -150,7 +150,7 @@
                 <li>Contribuer aux projets</li>
                 <li>Badge membre officiel</li>
             </ul>
-            <a href="#form-adhesion" class="btn-primary" style="margin-top:20px;display:inline-flex;">Je m'inscris →</a>
+            <a href="#form-adhesion" class="btn-primary type-btn" data-type="membre" style="margin-top:20px;display:inline-flex;">Je m'inscris →</a>
         </div>
         <div class="membership-card reveal reveal-delay-1" id="benevole">
             <div class="card-icon" style="background:rgba(29,158,117,0.12);border-color:rgba(29,158,117,0.3);margin-bottom:16px;">🙋</div>
@@ -163,7 +163,7 @@
                 <li>Co-organiser des événements</li>
                 <li>Accès équipe organisatrice</li>
             </ul>
-            <a href="#form-adhesion" class="btn-secondary" style="margin-top:20px;display:inline-flex;">Devenir bénévole →</a>
+            <a href="#form-adhesion" class="btn-secondary type-btn" data-type="benevole" style="margin-top:20px;display:inline-flex;">Devenir bénévole →</a>
         </div>
         <div class="membership-card reveal reveal-delay-2" id="partenaire">
             <div class="card-icon" style="background:rgba(127,119,221,0.12);border-color:rgba(127,119,221,0.3);margin-bottom:16px;">🏢</div>
@@ -176,7 +176,7 @@
                 <li>Co-branding événements</li>
                 <li>Convention de partenariat</li>
             </ul>
-            <a href="mailto:contact@naxus-asso.fr" class="btn-secondary" style="margin-top:20px;display:inline-flex;">Nous contacter →</a>
+            <a href="#form-adhesion" class="btn-secondary type-btn" data-type="partenaire" style="margin-top:20px;display:inline-flex;">Nous contacter →</a>
         </div>
     </div>
 
@@ -204,6 +204,11 @@
                         <input type="text" id="nom" name="nom" placeholder="YEHOUENOU" required>
                     </div>
                 </div>
+                <div class="form-row" id="row-entreprise" style="display:none; margin-bottom: 20px;">
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label for="entreprise">Nom de l'entreprise *</label>
+                        <input type="text" id="entreprise" name="entreprise" placeholder="Cybersoft Inc">
+                    </div>
                 <div class="form-group">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" placeholder="prenom@email.fr" required>
@@ -293,7 +298,7 @@
             <div style="margin-top:40px;padding:28px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-md);">
                 <h3 style="font-size:16px;margin-bottom:10px;">Besoin d'autres infos ?</h3>
                 <p style="font-size:13.5px;color:var(--text-2);margin-bottom:16px;line-height:1.7;">N'hésite pas à nous écrire directement.</p>
-                <a href="mailto:contact@naxus-asso.fr" class="btn-secondary" style="font-size:13px;">contact@naxus-asso.fr →</a>
+                <a href="mailto:naxus.asso@outlook.fr" class="btn-secondary" style="font-size:13px;">naxus.asso@outlook.fr →</a>
             </div>
         </div>
     </div>
@@ -311,7 +316,7 @@
         </div>
         <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="apropos.html">À propos</a></li><li><a href="projets.html">Projets</a></li><li><a href="evenements.html">Événements</a></li></ul></div>
         <div class="footer-col"><h4>Rejoindre</h4><ul><li><a href="rejoindre.html">Adhésion membre</a></li><li><a href="rejoindre.html#partenaire">Devenir partenaire</a></li><li><a href="rejoindre.html#benevole">Bénévolat</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:contact@naxus-asso.fr">contact@naxus-asso.fr</a></li><li><a href="http://www.linkedin.com/in/dylan-yehouenou" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/dydydebondy" target="_blank" rel="noopener">GitHub</a></li><li><a href="../index.html" style="color:var(--blue);">← Retour au Portfolio</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:naxus.asso@outlook.fr">naxus.asso@outlook.fr</a></li><li><a href="http://www.linkedin.com/in/dylan-yehouenou" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://github.com/dydydebondy" target="_blank" rel="noopener">GitHub</a></li><li><a href="../index.html" style="color:var(--blue);">← Retour au Portfolio</a></li></ul></div>
     </div>
     <div class="footer-bottom">
         <p>© 2024 NAXUS — Association loi 1901 · Lyon, France</p>
@@ -330,6 +335,31 @@
         });
     });
 
+    // Setup dynamic forms
+    const typeSelect = document.getElementById('type');
+    typeSelect.addEventListener('change', toggleEntreprise);
+
+    document.querySelectorAll('.type-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            typeSelect.value = btn.getAttribute('data-type');
+            toggleEntreprise();
+        });
+    });
+
+    function toggleEntreprise() {
+        const entRow = document.getElementById('row-entreprise');
+        const entInput = document.getElementById('entreprise');
+        if(typeSelect.value === 'partenaire') {
+            entRow.style.display = 'block';
+            entInput.required = true;
+            document.querySelector("label[for='message']").innerText = "Votre proposition de partenariat";
+        } else {
+            entRow.style.display = 'none';
+            entInput.required = false;
+            document.querySelector("label[for='message']").innerText = "Présente-toi / Ton projet (optionnel)";
+        }
+    }
+
     // Form submit simulation & mailto trigger
     document.getElementById('adhesion-form').addEventListener('submit', (e) => {
         e.preventDefault();
@@ -338,25 +368,32 @@
         const email  = document.getElementById('email').value;
         const type = document.getElementById('type').value;
         const profil = document.getElementById('profil').value;
+        const entreprise = document.getElementById('entreprise').value;
         const message = document.getElementById('message').value;
         const cgu    = document.getElementById('cgu').checked;
 
-        if (!prenom || !email || !cgu) {
-            alert('Merci de remplir les champs obligatoires (Prénom, Email) et d\'accepter les CGU.');
+        if (!prenom || !email || !cgu || (type==='partenaire' && !entreprise)) {
+            alert('Merci de remplir les champs obligatoires et d\'accepter les CGU.');
             return;
         }
 
         document.getElementById('adhesion-form').style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
 
-        const bodyText = `Nouvelle demande d'adhésion NAXUS%0A%0A`
+        let bodyText = `Nouvelle demande d'adhésion NAXUS%0A%0A`
             + `Nom : ${prenom} ${nom}%0A`
             + `Email : ${email}%0A`
-            + `Type cible : ${type}%0A`
-            + `Profil : ${profil}%0A`
-            + `Présentation : ${message}%0A`;
+            + `Type cible : ${type}%0A`;
+            
+        if(type === 'partenaire') {
+            bodyText += `Entreprise : ${entreprise}%0A`;
+        } else {
+            bodyText += `Profil : ${profil}%0A`;
+        }
 
-        window.location.href = `mailto:contact@naxus-asso.fr?subject=Nouvelle candidature : ${prenom} ${nom}&body=${bodyText}`;
+        bodyText += `%0AContenu : ${message}%0A`;
+
+        window.location.href = `mailto:naxus.asso@outlook.fr?subject=Nouvelle candidature : ${prenom} ${nom}&body=${bodyText}`;
     });
 </script>
 </body>

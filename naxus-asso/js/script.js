@@ -74,10 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── 6. COUNTER ANIMATION ──
     document.querySelectorAll('[data-count]').forEach(el => {
-        const target = +el.dataset.count;
+        const target = +el.dataset.count || 0;
         const duration = 1800;
-        const step = target / (duration / 16);
+        const step = target > 0 ? target / (duration / 16) : 0;
         let current = 0;
+        
+        if (target === 0) { el.textContent = '0'; return; }
+        
         const obs = new IntersectionObserver(([entry]) => {
             if (!entry.isIntersecting) return;
             obs.disconnect();
