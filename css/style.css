@@ -784,8 +784,13 @@ header {
 }
 
 @media screen and (max-width: 480px) {
+    :root { --navbar-height: 56px; }
     .cyber-btn { font-size: 0.7rem; padding: 0.6rem 1rem; }
+    #navbar { padding: 0 4%; gap: 0.5rem; }
+    .nav-brand { font-size: 1.1rem; letter-spacing: 2px; }
+    .footer-container { padding: 0 1rem; }
 }
+
 
 /* ================================================================ */
 /* --- SCROLL REVEAL (Animations d'apparition au scroll)       --- */
