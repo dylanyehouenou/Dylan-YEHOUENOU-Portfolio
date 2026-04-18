@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Met à jour l'icône dans le bouton toggle
         const icon = toggleBtn.querySelector('.toggle-icon');
         if (icon) {
-            icon.textContent = theme === DARK ? '☀️' : '🌙';
+            icon.textContent = theme === DARK ? '🌙' : '☀️';
             icon.title       = theme === DARK ? 'Passer en mode clair' : 'Passer en mode sombre';
         }
         // Ajoute la classe sur le bouton pour l'animation CSS du slider
