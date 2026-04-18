@@ -391,6 +391,30 @@
     .asso-join { padding: 3rem 1.5rem; }
 }
 
+/* Fix contrast in light mode */
+[data-theme="light"] .stat-card, 
+[data-theme="light"] .mission-card, 
+[data-theme="light"] .event-item, 
+[data-theme="light"] .asso-join {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+[data-theme="light"] .stat-number {
+    color: #1e40af; /* Bleu plus sombre pour les chiffres */
+}
+
+[data-theme="light"] .event-info p,
+[data-theme="light"] .mission-card p,
+[data-theme="light"] .join-content p {
+    opacity: 1;
+    color: #1e293b;
+}
+
+[data-theme="light"] .event-date {
+    background: rgba(37, 99, 235, 0.08);
+}
+
 /* -------------------------------------------------- */
 /* Logo NAXUS SVG (réseau de nœuds)                  */
 /* -------------------------------------------------- */
